@@ -1,0 +1,12 @@
+version: "3"
+services: 
+    webrtc:
+      image: "go-test"
+      container_name: "go-test-container"
+      ports:
+        - "8086:8086"
+      networks:
+        - app-network
+networks:
+  app-network:
+    driver: bridge
